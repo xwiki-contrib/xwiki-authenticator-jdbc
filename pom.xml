@@ -34,7 +34,7 @@
   <groupId>org.xwiki.contrib.authentication</groupId>
   <artifactId>xwiki-authenticator-jdbc</artifactId>
   <name>XWiki Authentication JDBC</name>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <description>XWiki authentication based on custom database trough JDBC API</description>
   <properties>
     <!-- Too lazy to fix them right now. -->
@@ -72,4 +72,17 @@
       <email>petr at praus.net</email>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/xwiki-contrib/xwiki-authenticator-jdbc.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki-contrib/xwiki-authenticator-jdbc.git</developerConnection>
+    <url>https://github.com/xwiki-contrib/xwiki-authenticator-jdbc</url>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>xwiki-staging</id>
+      <name>XWiki Staging Repository</name>
+      <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 </project>
