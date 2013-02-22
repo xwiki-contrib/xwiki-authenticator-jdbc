@@ -2,7 +2,7 @@ Authenticate user on main wiki based on a custom database trough JDBC API.
 
 # Configuration (xwiki.cfg)
 
-xwiki.authentication.authclass=org.xwiki.contrib.authentication.jdbc.XWikiJDBCAuthenticator
+    xwiki.authentication.authclass=org.xwiki.contrib.authentication.jdbc.XWikiJDBCAuthenticator
 
 # Configuration (xwiki.properties)
 
