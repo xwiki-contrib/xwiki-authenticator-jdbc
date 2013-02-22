@@ -33,9 +33,9 @@
 
   <groupId>org.xwiki.contrib.authentication</groupId>
   <artifactId>xwiki-authenticator-jdbc</artifactId>
-  <name>XWiki Authentication JDBC</name>
+  <name>XWiki Authenticator JDBC</name>
   <version>1.0-SNAPSHOT</version>
-  <description>XWiki authentication based on custom database trough JDBC API</description>
+  <description>XWiki authenticator based on custom database trough JDBC API</description>
   <properties>
     <!-- Too lazy to fix them right now. -->
     <xwiki.checkstyle.skip>true</xwiki.checkstyle.skip>
