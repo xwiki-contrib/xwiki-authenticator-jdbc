@@ -34,7 +34,7 @@
   <artifactId>xwiki-authenticator-jdbc</artifactId>
   <name>XWiki Authenticator JDBC</name>
   <version>1.1-SNAPSHOT</version>
-  <description>XWiki authenticator based on custom database trough JDBC API</description>
+  <description>XWiki authenticator based on custom database through JDBC API</description>
   <properties>
     <!-- Too lazy to fix them right now. -->
     <xwiki.checkstyle.skip>true</xwiki.checkstyle.skip>
