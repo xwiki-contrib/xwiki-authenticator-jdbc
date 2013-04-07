@@ -80,5 +80,4 @@ creation:
 
 # TODO
 
-* more encrypted passwords
 * add support for more than just String properties
