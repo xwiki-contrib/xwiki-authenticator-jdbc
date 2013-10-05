@@ -25,6 +25,7 @@ import java.util.regex.Pattern;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import org.slf4j.Logger;
 import org.xwiki.component.annotation.Component;
@@ -41,6 +42,7 @@ import com.xpn.xwiki.internal.event.XObjectUpdatedEvent;
 
 @Component
 @Named("org.xwiki.contrib.authentication.jdbc.internal.UserEventListener")
+@Singleton
 public class UserEventListener implements EventListener
 {
     /**
