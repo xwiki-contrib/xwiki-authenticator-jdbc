@@ -27,7 +27,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.slf4j.Logger;
-import org.xwiki.component.annotation.Role;
+import org.xwiki.component.annotation.Component;
 import org.xwiki.model.EntityType;
 import org.xwiki.model.reference.RegexEntityReference;
 import org.xwiki.observation.EventListener;
@@ -39,7 +39,7 @@ import com.xpn.xwiki.internal.event.XObjectAddedEvent;
 import com.xpn.xwiki.internal.event.XObjectDeletedEvent;
 import com.xpn.xwiki.internal.event.XObjectUpdatedEvent;
 
-@Role
+@Component
 @Named("org.xwiki.contrib.authentication.jdbc.internal.UserEventListener")
 public class UserEventListener implements EventListener
 {
