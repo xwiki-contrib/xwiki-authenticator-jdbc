@@ -24,15 +24,20 @@ Authenticate user on main wiki based on a custom database trough JDBC API.
     authentication.jdbc.password_hasher=pbkdf2
     OR
     authentication.jdbc.password_hasher=plaintext
+    OR
+    authentication.jdbc.password_hasher=bcrypt
 
     ## SELECT QUERY
 
     #-# The query to retrieve user information from the database including the password which will be compared against the password provided by user and hashed by a selected hashing class
     authentication.jdbc.select.query=select mail\, name from users where login=? and active = 1 and (? IS NULL or password=?)
+    
     #-# The well knows information to replace the ? with
     authentication.jdbc.select.parameters=login,password,password
+    
     #-# Mapping between the index in the JDBC select query result and the XWikiUsers xobject fields
     authentication.jdbc.select.mapping=email,name
+    
     #-# The name of the column in the select query that contains the password
     authentication.jdbc.select.password_column=password
 
@@ -40,6 +45,7 @@ Authenticate user on main wiki based on a custom database trough JDBC API.
 
     #-# The query to use to insert a new JDBC user when a new XWiki user has been created
     authentication.jdbc.insert.query=INSERT INTO users (login\, password\, mail\, name\, home\, uid\, creation_date\, modification_time\, active\, level) SELECT ?\, ?\, ?\, ?\, CONCAT('/data/users/'\, ?)\, max(uid) + 1\, now()\, now()\, 1\, 0 from users
+    
     #-# The well knows information to replace the ? with
     authentication.jdbc.insert.parameters=login,password,email,name,login
 
@@ -47,6 +53,7 @@ Authenticate user on main wiki based on a custom database trough JDBC API.
 
     #-# The query to use to update JDBC user when the XWiki user has been modified
     authentication.jdbc.update.query=UPDATE users SET mail=?\, name=?\, password=IF(? IS NULL\, password\, ?)\, modification_time=now() WHERE login=?
+    
     #-# The well knows information to replace the ? with
     authentication.jdbc.update.parameters=email,name,password,password,login
 
@@ -54,6 +61,7 @@ Authenticate user on main wiki based on a custom database trough JDBC API.
 
     #-# The query to use to delete the JDBC user when the XWiki user has been deleted
     authentication.jdbc.delete.query=DELETE from users WHERE login=?
+    
     #-# The well knows information to replace the ? with
     authentication.jdbc.delete.parameters=login
 
