@@ -27,6 +27,12 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.xwiki.component.annotation.Component;
 import org.xwiki.contrib.authentication.jdbc.PasswordHasher;
 
+/**
+ * BCryp based implementation of {@link PasswordHasher}.
+ * 
+ * @version $Id$
+ * @since 1.1
+ */
 @Component
 @Singleton
 @Named("bcrypt")
