@@ -123,6 +123,7 @@ public class PBKDF2PasswordHasher implements PasswordHasher
      * @return true if hash of suppliedPassword given the parameters (rounds, salt) equals checksum part of dbPassword
      *         string.
      */
+    @Override
     public boolean verify(String dbPassword, String suppliedPassword)
     {
         String[] dbpw = dbPassword.split("[$]");

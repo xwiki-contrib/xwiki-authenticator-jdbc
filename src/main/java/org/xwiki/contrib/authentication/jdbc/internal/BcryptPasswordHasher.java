@@ -17,11 +17,12 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
- 
+
 package org.xwiki.contrib.authentication.jdbc.internal;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
+
 import org.mindrot.jbcrypt.BCrypt;
 import org.xwiki.component.annotation.Component;
 import org.xwiki.contrib.authentication.jdbc.PasswordHasher;
@@ -29,16 +30,17 @@ import org.xwiki.contrib.authentication.jdbc.PasswordHasher;
 @Component
 @Singleton
 @Named("bcrypt")
-public class BcryptPasswordHasher
-  implements PasswordHasher
+public class BcryptPasswordHasher implements PasswordHasher
 {
-  public boolean verify(String dbPassword, String suppliedPassword)
-  {
-    return BCrypt.checkpw(suppliedPassword, dbPassword);
-  }
-  
-  public String create(String password)
-  {
-    return BCrypt.hashpw(password, BCrypt.gensalt()); 
-  }
+    @Override
+    public boolean verify(String dbPassword, String suppliedPassword)
+    {
+        return BCrypt.checkpw(suppliedPassword, dbPassword);
+    }
+
+    @Override
+    public String create(String password)
+    {
+        return BCrypt.hashpw(password, BCrypt.gensalt());
+    }
 }
