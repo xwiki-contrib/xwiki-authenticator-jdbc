@@ -33,7 +33,7 @@
   <groupId>org.xwiki.contrib.authentication</groupId>
   <artifactId>xwiki-authenticator-jdbc</artifactId>
   <name>XWiki Authenticator JDBC</name>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>jar</packaging>
   <description>XWiki authenticator based on custom database through JDBC API</description>
 
@@ -91,7 +91,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/xwiki-authenticator-jdbc.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/xwiki-authenticator-jdbc.git</developerConnection>
     <url>https://github.com/xwiki-contrib/xwiki-authenticator-jdbc</url>
-    <tag>HEAD</tag>
+    <tag>xwiki-authenticator-jdbc-1.1</tag>
   </scm>
   <distributionManagement>
     <repository>
