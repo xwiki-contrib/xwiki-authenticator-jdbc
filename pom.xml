@@ -30,7 +30,7 @@
 
   <groupId>org.xwiki.contrib.authentication</groupId>
   <artifactId>xwiki-authenticator-jdbc</artifactId>
-  <name>XWiki Authenticator JDBC</name>
+  <name>JDBC Authenticator</name>
   <version>1.2.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <description>XWiki authenticator based on custom database through JDBC API</description>
